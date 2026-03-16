@@ -1,0 +1,224 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0d0d0d;
+color:white;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#111;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-size:20px;
+font-weight:600;
+letter-spacing:2px;
+}
+
+nav a{
+color:#ccc;
+margin-left:25px;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:white;
+}
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+height:70vh;
+background:url("https://picsum.photos/1600/900?grayscale") center/cover;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#bbb;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+padding:80px 8%;
+}
+
+.portfolio h2{
+text-align:center;
+margin-bottom:50px;
+font-size:32px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.photo{
+width:100%;
+cursor:pointer;
+filter:grayscale(100%);
+transition:.4s;
+}
+
+.photo:hover{
+filter:grayscale(0%);
+transform:scale(1.03);
+}
+
+/* SOBRE */
+
+.about{
+padding:80px 15%;
+text-align:center;
+color:#bbb;
+}
+
+/* CONTATO */
+
+.contact{
+padding:80px 15%;
+text-align:center;
+background:#111;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+}
+
+#close{
+position:absolute;
+top:30px;
+right:50px;
+font-size:40px;
+cursor:pointer;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:38px;
+}
+
+.about{
+padding:60px 10%;
+}
+
+.contact{
+padding:60px 10%;
+}
+
+}
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+nav{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#111;
+flex-direction:column;
+display:none;
+}
+
+nav a{
+margin:15px 0;
+text-align:center;
+display:block;
+}
+
+nav.active{
+display:flex;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.portfolio{
+padding:60px 5%;
+}
+
+.gallery{
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+}
+
+}
+
+@media(max-width:480px){
+
+.hero{
+height:60vh;
+}
+
+.hero h1{
+font-size:26px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.logo{
+font-size:16px;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+}
