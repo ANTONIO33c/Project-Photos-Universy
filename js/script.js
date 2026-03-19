@@ -1,38 +1,55 @@
-const photos = document.querySelectorAll(".photo")
-const lightbox = document.getElementById("lightbox")
-const lightboxImg = document.getElementById("lightbox-img")
-const close = document.getElementById("close")
+// ================= NAVBAR =================
+fetch("navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar-container").innerHTML = data;
 
-photos.forEach(photo => {
+    const toggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
 
-photo.addEventListener("click", ()=>{
+    if (toggle && sidebar) {
 
-lightbox.style.display="flex"
-lightboxImg.src = photo.src
+      // Clique no botão (hambúrguer)
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation(); // evita fechar imediatamente
 
-})
+        sidebar.classList.toggle('active');
+        toggle.classList.toggle('open'); // classe para mudar o ícone
+      });
 
-})
+      // Clique fora da navbar
+      document.addEventListener('click', (e) => {
+        const isClickInside = sidebar.contains(e.target) || toggle.contains(e.target);
 
-close.addEventListener("click", ()=>{
-lightbox.style.display="none"
-})
+        if (!isClickInside) {
+          sidebar.classList.remove('active');
+          toggle.classList.remove('open');
+        }
+      });
 
-lightbox.addEventListener("click",(e)=>{
+    }
+  });
 
-if(e.target !== lightboxImg){
-lightbox.style.display="none"
-}
 
-})
+// ================= FOOTER =================
+fetch("footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
 
-/* MENU MOBILE */
 
-const menuToggle = document.getElementById("menu-toggle")
-const nav = document.getElementById("nav")
-
-menuToggle.addEventListener("click",()=>{
-
-nav.classList.toggle("active")
-
-})
+// ================= SWIPER =================
+new Swiper('.swiper', {
+  loop: true,
+  effect: 'fade',
+  fadeEffect: { crossFade: true },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+});

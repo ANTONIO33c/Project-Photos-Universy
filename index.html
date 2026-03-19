@@ -1,81 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio Fotográfico</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 
-<link rel="stylesheet" href="css/style.css">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Icons Social -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>Khateu - Fotografia</title>
 </head>
 
 <body>
 
-<header>
+  <!-- BOTÃO MOBILE -->
+  <button class="menu-toggle">☰</button>
 
-<div class="logo">KHAWE FOTOS FOTO</div>
+  <!-- NAVBAR (carregada via JS) -->
+  <div id="navbar-container"></div>
 
-<div class="menu-toggle" id="menu-toggle">
-☰
-</div>
+  <!-- CONTEÚDO -->
+  <main class="carousel-area">
 
-<nav id="nav">
-<a href="#">Início</a>
-<a href="#portfolio">Portfólio</a>
-<a href="#sobre">Sobre</a>
-<a href="#contato">Contato</a>
-</nav>
+    <!-- CARROSSEL -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
 
-</header>
+        <div class="swiper-slide">
+          <img src="images/IMG_9956.CR2.jpg">
+           <div class="slide-text">
+            <h2>O começo de uma nova história</h2>
+            <span>Um dia inesquecível</span>
+          </div>
+         </div>
 
-<section class="hero">
-<h1>Capturando momentos</h1>
-<p>Retratos • Lifestyle • Fotografia autoral</p>
-</section>
+        <div class="swiper-slide">
+          <img src="images/IMG_0847.CR2.jpg">
+           <div class="slide-text">
+            <h2>A beleza de gerar a vida</h2>
+            <span>À espera de um grande amor</span>
+          </div>
+        </div>
+        
+         <div class="swiper-slide">
+          <img src="images/IMG_1769.CR2.jpg">
+           <div class="slide-text">
+            <h2>Ovo de Páscoa Artesanal</h2>
+            <span>Edição Especial</span>
+          </div>
+        </div>
 
-<section id="portfolio" class="portfolio">
+         <div class="swiper-slide">
+          <img src="images/20240706141019_IMG_6736.JPG">
+           <div class="slide-text">
+              <h2>Sorrisos que iluminam o dia</h2>
+            <span>Momentos de pura alegria</span>
+          </div>
+        </div>
+        
+        <div class="swiper-slide">
+          <img src="images/IMG_9937.jpg">
+           <div class="slide-text">
+            <h2>Cada ponto, uma batalha</h2>
+            <span>Campeonato em ação</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<h2>Portfólio</h2>
+    <!-- GRID -->
+    <section class="recent-works">
+      <h2>Trabalhos recentes</h2>
 
-<div class="gallery">
+      <div class="grid-gallery">
+        <img src="images/IMG_0174.CR2.jpg">
+        <img src="images/IMG_1984.JPG">
+        <img src="images/IMG_1868.JPG">
+        <img src="images/IMG_9228.JPG">
+        <img src="images/IMG_9647.jpg">
+        <img src="images/ld-export-122a223a-07172025.jpg">
+         <img src="images/IMG_5834.jpg">
+        <img src="images/IMG_3458.jpg">
+      </div>
+    </section>
 
-<img src="https://picsum.photos/600/800?1" class="photo">
-<img src="https://picsum.photos/600/800?2" class="photo">
-<img src="https://picsum.photos/600/800?3" class="photo">
-<img src="https://picsum.photos/600/800?4" class="photo">
-<img src="https://picsum.photos/600/800?5" class="photo">
-<img src="https://picsum.photos/600/800?6" class="photo">
+  </main>
 
-</div>
+  <!-- FOOTER -->
+  <div id="footer"></div>
 
-</section>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<section id="sobre" class="about">
-<h2>Sobre</h2>
-
-<p>
-Sou um fotógrafo apaixonado por capturar emoções reais e momentos únicos.
-Meu estilo busca simplicidade, luz natural e estética minimalista.
-</p>
-
-</section>
-
-<section id="contato" class="contact">
-
-<h2>Contato</h2>
-
-<p>Email: contato@fotografo.com</p>
-<p>Instagram: @fotografo</p>
-
-</section>
-
-<div class="lightbox" id="lightbox">
-<span id="close">&times;</span>
-<img id="lightbox-img">
-</div>
-
-<script src="js/script.js"></script>
+  <!-- Script -->
+  <script src="js/script.js"></script>
 
 </body>
 </html>
