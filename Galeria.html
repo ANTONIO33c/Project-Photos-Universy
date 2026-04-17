@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/KT.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Katheu - Galeria</title>
+</head>
+
+
+<body>
+    
+    <!-- NAVBAR (carregada via JS) -->
+  <div id="navbar-container"></div>
+
+
+  <!-- BOTÃO MOBILE -->
+  <button class="menu-toggle" style="color: black;">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+<section class="gallery-page">
+  <h1 class="gallery-title">Galeria</h1>
+
+  <nav class="gallery-categories">
+    <a href="#" data-filter="all" class="active">Todos</a>
+    <span>|</span>
+    <a href="#" data-filter="casamento">Casamento</a>
+    <span>|</span>
+    <a href="#" data-filter="chaBebe">Celebração da Revelação</a>
+    <span>|</span>
+    <a href="#" data-filter="cobertura-futvolei">Cobertura Esportiva - Futvôlei</a>
+     <span>|</span>
+    <a href="#" data-filter="samba">Samba</a>
+    <span>|</span>
+    <a href="#" data-filter="niver-infantil">Aniversário Infantil</a>
+  </nav>
+
+  <div class="gallery-grid">
+    
+    <!-- CASAMENTO -->
+    <img src="images/imagesGaleria/Casamento01/IMG_0104.CR2-Casamento-1233x1850-compressed.jpg" data-category="casamento" alt="">
+    <img src="images/imagesGaleria/Casamento01/IMG_0256.CR2-Casamento-1233x1850-compressed.jpg" data-category="casamento" alt="">
+    <img src="images/imagesGaleria/Casamento01/IMG_0267.CR2-Casamento-1850x1233-compressed.jpg" data-category="casamento" alt="">
+    <img src="images/imagesGaleria/Casamento01/IMG_0270.CR2-Casamento-1850x1233-compressed.jpg" data-category="casamento" alt="">
+    <img src="images/imagesGaleria/Casamento01/IMG_0277.CR2-Casamento-1850x1233-compressed.jpg" data-category="casamento" alt="">
+    <img src="images/imagesGaleria/Casamento01/IMG_9952.CR2-Casamento-1233x1850-compressed.jpg" data-category="casamento" alt="">
+
+    <!-- CELEBRAÇÃO DA REVELAÇÃO (CHÁ DE BEBÊ / GÊNERO) -->
+    <img src="images/imagesGaleria/ChaDeBebe01/IMG_0820.CR2-1850x1233-compressed.jpg" data-category="chaBebe" alt="">
+    <img src="images/imagesGaleria/ChaDeBebe01/IMG_0841.CR2-1850x1233-compressed.jpg" data-category="chaBebe" alt="">
+    <img src="images/imagesGaleria/ChaDeBebe01/IMG_0850.CR2-compressed.jpg" data-category="chaBebe" alt="">
+    <img src="images/imagesGaleria/ChaDeBebe01/IMG_0856.CR2-compressed.jpg" data-category="chaBebe" alt="">
+    <img src="images/imagesGaleria/ChaDeBebe01/IMG_0860.CR2-compressed.jpg" data-category="chaBebe" alt="">
+    <img src="images/imagesGaleria/ChaDeBebe01/IMG_0886.CR2-compressed.jpg" data-category="chaBebe" alt="">
+
+    <!-- COBERTURA ESPORTIVA - FUTVÔLEI -->
+    <img src="images/imagesGaleria/FutVolei01/IMG_9802.jpg" data-category="cobertura-futvolei" alt="">
+    <img src="images/imagesGaleria/FutVolei01/IMG_0133-compressed.jpg" data-category="cobertura-futvolei" alt="">
+    <img src="images/imagesGaleria/FutVolei01/IMG_0280-compressed.jpg" data-category="cobertura-futvolei" alt="">
+    <img src="images/imagesGaleria/FutVolei01/IMG_9880-compressed.jpg" data-category="cobertura-futvolei" alt="">
+    <img src="images/imagesGaleria/FutVolei01/IMG_9908-compressed.jpg" data-category="cobertura-futvolei" alt="">
+    <img src="images/imagesGaleria/FutVolei01/IMG_9936-compressed.jpg" data-category="cobertura-futvolei" alt="">
+
+    <!-- SAMBA -->
+    <img src="images/imagesGaleria/Samba-gogo-01/IMG_5750-compressed.jpg" data-category="samba" alt="">
+    <img src="images/imagesGaleria/Samba-gogo-01/IMG_5756.jpg" data-category="samba" alt="">
+    <img src="images/imagesGaleria/Samba-gogo-01/IMG_5765-compressed.jpg" data-category="samba" alt="">
+    <img src="images/imagesGaleria/Samba-gogo-01/IMG_5772.jpg" data-category="samba" alt="">
+    <img src="images/imagesGaleria/Samba-gogo-01/IMG_5778-compressed.jpg" data-category="samba" alt="">
+    <img src="images/imagesGaleria/Samba-gogo-01/IMG_5810-compressed.jpg" data-category="samba" alt="">
+
+     <!-- Niver Infanfil -->
+    <img src="images/imagesGaleria/Aniversario-infatil/20240706125159_IMG_6500.jpg" data-category="niver-infantil" alt="">
+    <img src="images/imagesGaleria/Aniversario-infatil/20240706132657_IMG_6597.jpg" data-category="niver-infantil" alt="">
+    <img src="images/imagesGaleria/Aniversario-infatil/20240706143735_IMG_6793.jpg" data-category="niver-infantil" alt="">
+    <img src="images/imagesGaleria/Aniversario-infatil/20240706160140_IMG_6919.jpg" data-category="niver-infantil" alt="">
+    <img src="images/imagesGaleria/Aniversario-infatil/20240706161550_IMG_7016-compressed.jpg" data-category="niver-infantil" alt="">
+    <img src="images/imagesGaleria/Aniversario-infatil/20240706163216_IMG_7032.jpg" data-category="niver-infantil" alt="">
+
+  </div>
+
+  <div class="lightbox" id="lightbox">
+  <img src="" alt="">
+  </div>
+
+</section>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+<script src="js/Galery.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

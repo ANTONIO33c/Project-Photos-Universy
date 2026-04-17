@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/KT.svg" type="image/x-icon">
 
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -17,7 +18,11 @@
 <body>
 
   <!-- BOTÃO MOBILE -->
-  <button class="menu-toggle">☰</button>
+  <button class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
   <!-- NAVBAR (carregada via JS) -->
   <div id="navbar-container"></div>
@@ -26,7 +31,7 @@
   <main class="carousel-area">
 
     <!-- CARROSSEL -->
-    <div class="swiper">
+    <div class="swiper swiper-hero">
       <div class="swiper-wrapper">
 
         <div class="swiper-slide">
@@ -71,26 +76,95 @@
       </div>
     </div>
 
-    <!-- GRID -->
-    <section class="recent-works">
-      <h2>Trabalhos recentes</h2>
+  <!-- SWIPER - Trabalhos Recentes -->
+  <section class="recent-works">
+    <h2>Trabalhos recentes</h2>
 
-      <div class="grid-gallery">
-        <img src="images/IMG_0174.CR2.jpg">
-        <img src="images/IMG_1984.JPG">
-        <img src="images/IMG_1868.JPG">
-        <img src="images/IMG_9228.JPG">
-        <img src="images/IMG_9647.jpg">
-        <img src="images/ld-export-122a223a-07172025.jpg">
-         <img src="images/IMG_5834.jpg">
-        <img src="images/IMG_3458.jpg">
+    <!-- Grid: telas > 824px -->
+    <div class="grid-gallery">
+      <img src="images/IMG_0174.CR2.jpg" alt="Trabalho recente">
+      <img src="images/IMG_1984.JPG" alt="Trabalho recente">
+      <img src="images/IMG_1868.JPG" alt="Trabalho recente">
+      <img src="images/IMG_9228.JPG" alt="Trabalho recente">
+      <img src="images/IMG_9647.jpg" alt="Trabalho recente">
+      <img src="images/ld-export-122a223a-07172025.jpg" alt="Trabalho recente">
+      <!-- <img src="images/IMG_5834.jpg" alt="Trabalho recente">
+      <img src="images/IMG_3458.jpg" alt="Trabalho recente"> -->
+    </div>
+
+    <!-- Swiper: telas <= 824px -->
+    <div class="swiper swiper-trabalhos">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/IMG_0174.CR2.jpg" alt="Trabalho recente"></div>
+        <div class="swiper-slide"><img src="images/IMG_1984.JPG" alt="Trabalho recente"></div>
+        <div class="swiper-slide"><img src="images/IMG_1868.JPG" alt="Trabalho recente"></div>
+        <div class="swiper-slide"><img src="images/IMG_9228.JPG" alt="Trabalho recente"></div>
+        <div class="swiper-slide"><img src="images/IMG_9647.jpg" alt="Trabalho recente"></div>
+        <div class="swiper-slide"><img src="images/ld-export-122a223a-07172025.jpg" alt="Trabalho recente"></div>
+        <div class="swiper-slide"><img src="images/IMG_5834.jpg" alt="Trabalho recente"></div>
+        <div class="swiper-slide"><img src="images/IMG_3458.jpg" alt="Trabalho recente"></div>
       </div>
-    </section>
+    </div>
+
+  </section>
+
+  <section class="about" id="fotografo">
+
+    <div class="about-image">
+      <img src="images/serxo-fotografo-de-bodas-pontevedra.jpg" alt="O Fotógrafo">
+    </div>
+    <div class="about-content">
+      <span class="about-label">O Fotógrafo</span>
+      <h2>Khawe Mallony</h2>
+      
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+      </p>
+      <a href="#" class="about-link">Saiba mais</a>
+    </div>
+  </section>
+
+  
+  <section class="contact" id="contato">
+    <div class="contact-inner">
+      <span class="contact-label">Contato</span>
+      <h2>Vamos trabalhar juntos?</h2>
+
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Seu nome">
+          </div>
+  
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" rows="5" placeholder="Conte um pouco sobre o que você precisa..."></textarea>
+        </div>
+
+        <button type="submit" class="contact-btn">Enviar mensagem</button>
+      </div>
+    </div>
+  </section>
 
   </main>
 
   <!-- FOOTER -->
   <div id="footer"></div>
+
+  <!-- icon whatsapp flutuante -->
+    <a href="https://api.whatsapp.com/send?phone=5511961479784&text=Ol%C3%A1%21%20Khawe.%20Tudo%20bem%3F%20Vim%20pelo%20site%20do%20Katheu%20Fotos%2C%20podemos%20conversar%3F" target="_blank" class="whatsapp-float">
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

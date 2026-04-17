@@ -1,4 +1,4 @@
-// ================= NAVBAR =================
+// ================= Calling NAVBAR =================
 fetch("navbar.html")
   .then(res => res.text())
   .then(data => {
@@ -31,7 +31,7 @@ fetch("navbar.html")
   });
 
 
-// ================= FOOTER =================
+// ================= Calling FOOTER =================
 fetch("footer.html")
   .then(res => res.text())
   .then(data => {
@@ -39,8 +39,8 @@ fetch("footer.html")
   });
 
 
-// ================= SWIPER =================
-new Swiper('.swiper', {
+// ================= SWIPER - CAROUSEL =================
+new Swiper('.swiper-hero', {
   loop: true,
   effect: 'fade',
   fadeEffect: { crossFade: true },
@@ -53,3 +53,35 @@ new Swiper('.swiper', {
     clickable: true
   },
 });
+
+// ================= SWIPER - CARDS - MY JOBS =================
+
+let swiperTrabalhos = null;
+
+function initSwiperTrabalhos() {
+  if (window.innerWidth <= 841 && !swiperTrabalhos) {
+    // Ativa o Swiper em telas pequenas
+    swiperTrabalhos = new Swiper('.swiper-trabalhos', {
+      slidesPerView: 1.15,
+      spaceBetween: 12,
+      grabCursor: true,
+      pagination: {
+        el: '.swiper-trabalhos .swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        480: { slidesPerView: 1.5, spaceBetween: 14 },
+        640: { slidesPerView: 2.2, spaceBetween: 16 },
+      },
+    });
+  } else if (window.innerWidth > 824 && swiperTrabalhos) {
+    // Destroi o Swiper em telas grandes
+    swiperTrabalhos.destroy(true, true);
+    swiperTrabalhos = null;
+  }
+}
+
+initSwiperTrabalhos();
+window.addEventListener('resize', initSwiperTrabalhos);
+
+
